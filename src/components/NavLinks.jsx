@@ -9,7 +9,7 @@ const NavLinks = async () => {
   const filteredNavLinks = navData.filter((elem) => {
     return elem.scrapable === true;
   });
-  console.log(filteredNavLinks);
+  
 
   return (
     <nav>
