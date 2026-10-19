@@ -5,7 +5,7 @@ const FirstMainNewsCard = ({ data }) => {
   const firsNews = data[0];
 
   return (
-    <div className="border border-[#e0d9d9] rounded overflow-hidden">
+    <div className="border border-[#e0d9d9] rounded overflow-hidden cursor-pointer">
       <Image
         src={firsNews.imageUrl}
         alt={firsNews.imageAlt}
