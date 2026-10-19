@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 const CategoryPageCard = ({data}) => {
-    console.log(data)
+    
   return (
     <div className="border border-[#e0d9d9] rounded overflow-hidden">
               <Image
