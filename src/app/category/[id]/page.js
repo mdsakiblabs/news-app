@@ -9,7 +9,7 @@ const page = async ({ params }) => {
   const catagoryData = data.data;
  
   return (
-    <div className="max-w-270 mx-auto my-10">
+    <div className="max-w-270 mx-auto my-7">
       <h1 className="text-2xl font-semibold border-b-2 border-red-600 pb-1 mb-6">{data.title}</h1>
       <div className="grid grid-cols-3 gap-5  ">
         {catagoryData.map((elem, ind) => {
