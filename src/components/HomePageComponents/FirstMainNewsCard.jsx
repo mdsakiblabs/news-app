@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FirstMainNewsCard = ({ data }) => {
   const firsNews = data[0];
-
+ 
   return (
+    <Link href={`/details/${firsNews.id}`}>
     <div className="border border-[#e0d9d9] rounded overflow-hidden cursor-pointer">
       <Image
         src={firsNews.imageUrl}
@@ -19,6 +21,7 @@ const FirstMainNewsCard = ({ data }) => {
         <p className="line-clamp-3 text-[14px] font-light">{firsNews.description}</p>
       </div>
     </div>
+    </Link>
   );
 };
 

@@ -1,8 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const OtherSectionsCard = ({data}) => {
+    
   return (
-    <div className="border border-[#e0d9d9] rounded overflow-hidden">
+   <Link href={`/details/${data.id}`}>
+      <div className="border border-[#e0d9d9] rounded overflow-hidden cursor-pointer">
           <Image
             src={data.imageUrl}
             alt={data.imageAlt}
@@ -16,6 +19,7 @@ const OtherSectionsCard = ({data}) => {
             <p className="line-clamp-3 text-[14px] font-light">{data.description}</p>
           </div>
         </div>
+   </Link>
   )
 }
 
