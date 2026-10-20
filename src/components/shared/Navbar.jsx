@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile view */}
-      <div className="parent md:hidden bg-amber-500 w-full px-5 flex justify-between items-center py-2">
+      <div className="parent md:hidden  w-full px-5 flex justify-between items-center py-2">
         <MobileMenu>
           <NavLinks />
         </MobileMenu>

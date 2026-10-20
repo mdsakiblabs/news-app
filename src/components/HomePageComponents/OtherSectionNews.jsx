@@ -14,10 +14,10 @@ const OtherSectionNews = ({ otherSectionNews }) => {
         const mainNews = elem.articles
         
         return (
-          <div key={ind} className="mt-8">
+          <div key={ind} className="mt-8 px-5 md:px-0">
             <h1 className="text-xl font-semibold border-red-600 border-b-2 mb-3 pb-2">{elem.title}</h1>
 
-            <div className="card grid grid-cols-3 gap-3 items-stretch">
+            <div className="card flex flex-col gap-5 md:grid md:grid-cols-3 md:gap-3 items-stretch">
                {mainNews.map((elem,ind)=>{
                 return <OtherSectionsCard data={elem} key={ind}/>
                })}

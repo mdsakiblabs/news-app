@@ -3,7 +3,7 @@ import React from "react";
 
 const MostReadSection = ({ data }) => {
   return (
-    <div className="border border-[#e0d9d9] rounded px-4 py-3 ">
+    <div className="border border-[#e0d9d9] rounded md:px-4 py-3 mt-5 md:m-0 px-5 mx-5">
       <h1 className="text-[19px] mb-2 font-semibold ">{data[0].category}</h1>
 
       <ol className="list-decimal marker:text-red-600 marker:text-[18px] list-inside">
