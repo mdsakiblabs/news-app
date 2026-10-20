@@ -9,15 +9,14 @@ const NavLinks = async () => {
   const filteredNavLinks = navData.filter((elem) => {
     return elem.scrapable === true;
   });
-  
 
   return (
     <nav>
-      <ul className="flex gap-4">
+      <ul className="flex flex-col gap-4 md:flex-row">
         <Link href={"/"}>
           <li>হোম</li>
         </Link>
-        {filteredNavLinks.map((elem,ind) => {
+        {filteredNavLinks.map((elem, ind) => {
           return (
             <li key={ind}>
               <Link href={`/category/${elem.slug}`}>{elem.title}</Link>
