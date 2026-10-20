@@ -18,15 +18,15 @@ const Home = async () => {
 
   return (
     <div className="max-w-270 mx-auto my-7">
-      <div className="grid grid-cols-3 gap-5 ">
+      <div className="md:grid grid-cols-3 gap-5 ">
         {/* news section */}
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <MainNews news={mainNewsHeadlines} />
           <OtherSectionNews otherSectionNews={otherSectionNews} />
         </div>
 
         {/* most read section */}
-        <div className="col-span-1 ">
+        <div className="md:col-span-1 ">
           <MostReadSection data={mostReadData} />
         </div>
       </div>

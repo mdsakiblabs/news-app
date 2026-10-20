@@ -8,7 +8,7 @@ const MainNews = ({ news }) => {
     <div>
       {/* first news */}
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="px-5 flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-3">
         <FirstMainNewsCard data={news} />
         <MainNewsList data={news} />
       </div>
