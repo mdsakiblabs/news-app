@@ -18,9 +18,15 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${notoSerifBengali.className}  h-full antialiased`}
     >
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <LatestHeadlinesScrollBar/>
+        <LatestHeadlinesScrollBar />
 
         {children}
       </body>

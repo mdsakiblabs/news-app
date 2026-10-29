@@ -3,6 +3,7 @@ import Image from "next/image";
 import newsLogo from "../../../public/NEWS 360 Global Broadcast Logo.png";
 import NavLinks from "../NavLinks";
 import MobileMenu from "../MobileMenu";
+import Link from "next/link";
 const Navbar = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
     dateStyle: "full",
@@ -12,7 +13,27 @@ const Navbar = () => {
     <div>
       {/* DeskTop view */}
       <div className="parent hidden md:visible  w-full md:flex justify-center items-center">
-        <div className="wrapper w-270">
+        <div className="wrapper w-270 relative">
+          {/* socil links */}
+          <div className="absolute left-0 top-13 flex gap-10 items-center justify-center">
+            <Link href={''}>
+              <i className="ri-facebook-circle-fill text-4xl"></i>
+            </Link>
+
+            <Link href={''}>
+              <i className="ri-instagram-fill text-4xl"></i>
+            </Link>
+
+            <Link href={''}>
+              <i className="ri-linkedin-box-fill text-4xl"></i>
+            </Link>
+
+            <Link href={''}>
+              <i className="ri-github-fill text-4xl"></i>
+            </Link>
+          </div>
+
+          {/* center logo */}
           <div className=" w-full flex justify-center items-center relative">
             <div className="left-side-logo max-w-full  mx-auto flex items-center justify-center gap-2">
               <div>
@@ -50,7 +71,6 @@ const Navbar = () => {
 
       {/* Mobile view */}
       <div className="parent md:hidden  w-full px-5 flex justify-between items-center py-2">
-        
         <div className="flex justify-center items-center">
           <Image
             src={newsLogo}
@@ -61,18 +81,17 @@ const Navbar = () => {
           ></Image>
           <div className="leading-4.5">
             <h1 className="text-[18px] font-bold font-sans text-red-700">
-            News 360
-          </h1>
-          <p className="text-[11px]">{date}</p>
+              News 360
+            </h1>
+            <p className="text-[11px]">{date}</p>
           </div>
         </div>
 
         <div>
           <MobileMenu>
-          <NavLinks />
-        </MobileMenu>
+            <NavLinks />
+          </MobileMenu>
         </div>
-        
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import SignInSingUpBtn from "./MobileSignInSingUpBtn";
 import MobileSignInSingUpBtn from "./MobileSignInSingUpBtn";
 
 const NavLinks = async () => {
@@ -49,7 +48,7 @@ const NavLinks = async () => {
       </ul>
 
       <div className="md:hidden flex justify-items-start mt-4">
-        <MobileSignInSingUpBtn/>
+        <MobileSignInSingUpBtn />
       </div>
     </nav>
   );
