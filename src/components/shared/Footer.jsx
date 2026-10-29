@@ -10,7 +10,7 @@ const outfit = Outfit({
 const Footer = () => {
   return (
     <div className="w-full bg-[#03045e] text-white pt-10 pb-2">
-      <div className="max-w-270 mx-auto flex flex-col justify-center items-center">
+      <div className=" flex flex-col justify-center items-center">
         <div className="heading text-center">
           <h1 className="text-5xl font-sans font-semibold">News 360</h1>
           <p className="text-[12px] font-sans font-light">
@@ -22,7 +22,7 @@ const Footer = () => {
             </span>{" "}
           </p>
         </div>
-        <div className="social-links flex gap-3 my-5 justify-center items-center">
+        <div className="social-links flex gap-3 my-5 justify-center items-center border-gray-500 w-full py-5 border-t border-b">
             <span className="font-sans text-xl">Follow Me</span>
           <Link href={""}>
             <i className="ri-facebook-circle-fill text-3xl"></i>
