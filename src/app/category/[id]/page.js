@@ -20,11 +20,11 @@ const page = async ({ params }) => {
   }
 
   return (
-    <div className="max-w-270 mx-auto my-7">
+    <div className="max-w-270 mx-auto my-7 px-5 md:px-0">
       <h1 className="text-2xl font-semibold border-b-2 border-red-600 pb-1 mb-6">
         {data.title}
       </h1>
-      <div className="md:grid md:grid-cols-3 md:gap-5 items-stretch ">
+      <div className="md:grid md:grid-cols-3 md:gap-5 items-stretch flex flex-col gap-5">
         {catagoryData.map((elem, ind) => {
           return <CategoryPageCard data={elem} key={ind} />;
         })}
