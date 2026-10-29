@@ -16,9 +16,7 @@ const Navbar = () => {
         <div className="wrapper w-270 relative">
           {/* socil links */}
           <div className="absolute left-0 top-13 flex gap-10 z-50 items-center justify-center">
-            <Link href="https://www.facebook.com/ankon.chowdhury.566477"
-             
-            >
+            <Link href="https://www.facebook.com/ankon.chowdhury.566477">
               <i className="ri-facebook-circle-fill text-4xl"></i>
             </Link>
 
@@ -37,23 +35,25 @@ const Navbar = () => {
 
           {/* center logo */}
           <div className=" w-full flex justify-center items-center relative">
-            <div className="left-side-logo max-w-full  mx-auto flex items-center justify-center gap-2">
-              <div>
-                <Image
-                  src={newsLogo}
-                  width={40}
-                  height={40}
-                  alt="logo"
-                  className="translate-y-1.5 w-20 h-20"
-                ></Image>
+            <Link href="/">
+              <div className="left-side-logo max-w-full  mx-auto flex items-center justify-center gap-2">
+                <div>
+                  <Image
+                    src={newsLogo}
+                    width={40}
+                    height={40}
+                    alt="logo"
+                    className="translate-y-1.5 w-20 h-20"
+                  ></Image>
+                </div>
+                <div className="leading-5">
+                  <h1 className="text-2xl font-bold font-sans text-red-700">
+                    News 360
+                  </h1>
+                  <p>{date}</p>
+                </div>
               </div>
-              <div className="leading-5">
-                <h1 className="text-2xl font-bold font-sans text-red-700">
-                  News 360
-                </h1>
-                <p>{date}</p>
-              </div>
-            </div>
+            </Link>
 
             <div className="right-side-buttons absolute right-0 flex gap-3">
               <button className="px-4 py-1 border bg-green-400 cursor-pointer">
@@ -73,21 +73,23 @@ const Navbar = () => {
 
       {/* Mobile view */}
       <div className="parent md:hidden  w-full px-5 flex justify-between items-center py-2">
-        <div className="flex justify-center items-center">
-          <Image
-            src={newsLogo}
-            width={40}
-            height={40}
-            alt="logo"
-            className="w-12 h-12"
-          ></Image>
-          <div className="leading-4.5">
-            <h1 className="text-[18px] font-bold font-sans text-red-700">
-              News 360
-            </h1>
-            <p className="text-[11px]">{date}</p>
+        <Link href="/">
+          <div className="flex justify-center items-center">
+            <Image
+              src={newsLogo}
+              width={40}
+              height={40}
+              alt="logo"
+              className="w-12 h-12"
+            ></Image>
+            <div className="leading-4.5">
+              <h1 className="text-[18px] font-bold font-sans text-red-700">
+                News 360
+              </h1>
+              <p className="text-[11px]">{date}</p>
+            </div>
           </div>
-        </div>
+        </Link>
 
         <div>
           <MobileMenu>
