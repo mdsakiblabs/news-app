@@ -2,27 +2,48 @@ import Link from "next/link";
 import React from "react";
 
 const NavLinks = async () => {
-  const res = await fetch("https://news-api-v2.vercel.app/api/categories");
-  const data = await res.json();
-  const navData = data.data;
+  let filteredNavLinks = [];
 
-  const filteredNavLinks = navData.filter((elem) => {
-    return elem.scrapable === true;
-  });
+  try {
+    const res = await fetch("https://news-api-v2.vercel.app/api/categories", {
+      next: { revalidate: 300 },
+    });
+
+    if (!res.ok) {
+      return (
+        <nav>
+          <ul className="flex flex-col gap-4 md:flex-row">
+            <li>
+              <Link href="/">হোম</Link>
+            </li>
+          </ul>
+        </nav>
+      );
+    }
+
+    const data = await res.json();
+
+    if (!Array.isArray(data?.data)) {
+      throw new Error("Invalid categories API response");
+    }
+
+    filteredNavLinks = data.data.filter((elem) => elem?.scrapable === true);
+  } catch (error) {
+    console.error("Failed to load categories:", error);
+  }
 
   return (
     <nav>
       <ul className="flex flex-col gap-4 md:flex-row">
-        <Link href={"/"}>
-          <li>হোম</li>
-        </Link>
-        {filteredNavLinks.map((elem, ind) => {
-          return (
-            <li key={ind}>
-              <Link href={`/category/${elem.slug}`}>{elem.title}</Link>
-            </li>
-          );
-        })}
+        <li>
+          <Link href="/">হোম</Link>
+        </li>
+
+        {filteredNavLinks.map((elem) => (
+          <li key={elem.slug}>
+            <Link href={`/category/${elem.slug}`}>{elem.title}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
