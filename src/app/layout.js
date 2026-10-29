@@ -2,6 +2,7 @@ import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import LatestHeadlinesScrollBar from "@/components/HomePageComponents/LatestHeadlinesScrollBar";
+import Footer from "@/components/shared/Footer";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <LatestHeadlinesScrollBar />
 
         {children}
+        <Footer/>
       </body>
     </html>
   );
