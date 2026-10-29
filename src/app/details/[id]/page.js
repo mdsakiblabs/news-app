@@ -31,11 +31,11 @@ const Page = async ({ params }) => {
   }
 
   return (
-    <div className="max-w-200 mx-auto my-7 flex flex-col items-center justify-center text-center">
-      <h1 className="mb-5 text-4xl font-semibold">{detailsData.title}</h1>
+    <div className="max-w-220 mx-auto mb-7 mt-10 flex flex-col items-center justify-center text-center">
+      <h1 className="mb-5 md:text-4xl text-2xl px-5 md:px-0 md:font-semibold">{detailsData.title}</h1>
 
       {detailsData.imageUrl && (
-        <div>
+        <div className="px-5 md:px-0 ">
           <Image
             src={detailsData.imageUrl}
             width={600}
@@ -45,7 +45,7 @@ const Page = async ({ params }) => {
         </div>
       )}
 
-      <p className="my-3">{detailsData.text}</p>
+      <p className="mt-10 text-[17px] leading-6 font-light md:px-0 px-5">{detailsData.text}</p>
     </div>
   );
 };
