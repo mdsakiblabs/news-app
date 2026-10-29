@@ -15,20 +15,22 @@ const Navbar = () => {
       <div className="parent hidden md:visible  w-full md:flex justify-center items-center">
         <div className="wrapper w-270 relative">
           {/* socil links */}
-          <div className="absolute left-0 top-13 flex gap-10 items-center justify-center">
-            <Link href={''}>
+          <div className="absolute left-0 top-13 flex gap-10 z-50 items-center justify-center">
+            <Link href="https://www.facebook.com/ankon.chowdhury.566477"
+             
+            >
               <i className="ri-facebook-circle-fill text-4xl"></i>
             </Link>
 
-            <Link href={''}>
+            <Link href="https://www.instagram.com/sakib_hasan_ankon/?hl=en">
               <i className="ri-instagram-fill text-4xl"></i>
             </Link>
 
-            <Link href={''}>
+            <Link href={""}>
               <i className="ri-linkedin-box-fill text-4xl"></i>
             </Link>
 
-            <Link href={''}>
+            <Link href="https://github.com/mdsakiblabs">
               <i className="ri-github-fill text-4xl"></i>
             </Link>
           </div>

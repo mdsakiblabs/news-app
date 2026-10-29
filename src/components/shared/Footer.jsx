@@ -22,13 +22,13 @@ const Footer = () => {
             </span>{" "}
           </p>
         </div>
-        <div className="social-links flex gap-3 my-5 justify-center items-center border-gray-500 w-full py-5 border-t border-b">
-            <span className="font-sans text-xl">Follow Me</span>
-          <Link href={""}>
+        <div className="social-links flex gap-5 my-5 justify-center items-center border-gray-500 w-full py-5 border-t border-b">
+          <span className="font-sans text-xl">Follow Me</span>
+          <Link href="https://www.facebook.com/ankon.chowdhury.566477">
             <i className="ri-facebook-circle-fill text-3xl"></i>
           </Link>
 
-          <Link href={""}>
+          <Link href="https://www.instagram.com/sakib_hasan_ankon/?hl=en">
             <i className="ri-instagram-fill text-3xl"></i>
           </Link>
 
@@ -36,12 +36,14 @@ const Footer = () => {
             <i className="ri-linkedin-box-fill text-3xl"></i>
           </Link>
 
-          <Link href={""}>
+          <Link href="https://github.com/mdsakiblabs">
             <i className="ri-github-fill text-3xl"></i>
           </Link>
         </div>
         <div className="coppyright">
-          <p className="font-sans font-normal text-[13px] text-gray-300">Copyright © 2026, news360</p>
+          <p className="font-sans font-normal text-[13px] text-gray-300">
+            Copyright © 2026, news360
+          </p>
         </div>
       </div>
     </div>
