@@ -50,29 +50,29 @@ const Navbar = () => {
 
       {/* Mobile view */}
       <div className="parent md:hidden  w-full px-5 flex justify-between items-center py-2">
-        <MobileMenu>
-          <NavLinks />
-        </MobileMenu>
+        
         <div className="flex justify-center items-center">
           <Image
             src={newsLogo}
             width={40}
             height={40}
             alt="logo"
-            className="w-8 h-8"
+            className="w-12 h-12"
           ></Image>
-          <h1 className="text-[13px] font-bold font-sans text-red-700">
+          <div className="leading-4.5">
+            <h1 className="text-[18px] font-bold font-sans text-red-700">
             News 360
           </h1>
+          <p className="text-[11px]">{date}</p>
+          </div>
         </div>
-        <div className="flex gap-2">
-          <button className="px-2 py-1 border bg-green-400 cursor-pointer text-[8px]">
-            সাইন ইন
-          </button>
-          <button className="px-2 py-1 border bg-red-700 text-white text-[8px] cursor-pointer">
-            সাইন আপ
-          </button>
+
+        <div>
+          <MobileMenu>
+          <NavLinks />
+        </MobileMenu>
         </div>
+        
       </div>
     </div>
   );

@@ -19,8 +19,8 @@ const MobileMenu = ({ children }) => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="30"
+            height="30"
             viewBox="0 0 50 50"
             fill="currentColor"
           >
@@ -37,7 +37,7 @@ const MobileMenu = ({ children }) => {
               setIsOpen(false);
             }
           }}
-          className="absolute left-0 top-full z-50 mt-2 min-w-48 rounded border bg-white p-4 shadow-lg"
+          className="absolute right-0 top-full z-50 mt-2 min-w-48  rounded border bg-white p-4 shadow-lg"
         >
           {children}
         </div>
