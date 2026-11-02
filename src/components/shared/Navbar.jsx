@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import Image from "next/image";
 import newsLogo from "../../../public/NEWS 360 Global Broadcast Logo.png";
@@ -56,12 +58,16 @@ const Navbar = () => {
             </Link>
 
             <div className="right-side-buttons absolute right-0 flex gap-3">
-              <button className="px-4 py-1 border bg-green-400 cursor-pointer">
-                সাইন ইন
-              </button>
-              <button className="px-4 py-1 border bg-red-700 text-white cursor-pointer">
-                সাইন আপ
-              </button>
+              <Link href="/sign-in">
+                <button className="px-4 py-1 border bg-green-400 cursor-pointer">
+                  সাইন ইন
+                </button>
+              </Link>
+              <Link href="/sign-up">
+                <button className="px-4 py-1 border bg-red-700 text-white cursor-pointer">
+                  সাইন আপ
+                </button>
+              </Link>
             </div>
           </div>
 
