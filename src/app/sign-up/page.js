@@ -1,20 +1,41 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client"; 
 const page = () => {
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+    const [password,setPassword] = useState('')
+
+    const handleSubmit = async (e)=>{
+        e.preventDefault()
+       const {data,error} =  await authClient.signUp.email({
+            name,
+            email,
+            password,
+            callbackURL: '/'
+        })
+
+        if(data){
+            console.log(data)
+        }
+
+        if(error){
+            console.log(error)
+        }
+    }
+
+
+
   return (
     <main className="flex min-h-screen flex-col items-center bg-[#f0f5f0] px-4 py-5 text-[#26352b] sm:py-8">
       <header className="mb-6 text-center">
         <h1 className="text-2xl font-bold sm:text-3xl">অ্যাকাউন্ট তৈরি করুন</h1>
-
-        <p className="mt-2 text-sm text-[#78827a]">
-          বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।
-        </p>
       </header>
 
       <section className="w-full max-w-[420px] rounded-2xl border border-[#dfe8df] bg-[#fbfdfb] p-5 sm:p-6">
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="mb-1.5 block text-sm">
               নাম
@@ -23,7 +44,7 @@ const page = () => {
             <input
               id="name"
               type="text"
-              //   value={name}
+              value={name}
               onChange={(e) => setName(e.target.value)}
               required
               autoComplete="name"
@@ -40,7 +61,7 @@ const page = () => {
             <input
               id="email"
               type="email"
-              //   value={email}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
@@ -57,7 +78,7 @@ const page = () => {
             <input
               id="password"
               type="password"
-              //   value={password}
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
               minLength={8}
@@ -67,28 +88,12 @@ const page = () => {
             />
           </div>
 
-          <div>
-            <label htmlFor="confirmPassword" className="mb-1.5 block text-sm">
-              পাসওয়ার্ড নিশ্চিত করুন
-            </label>
-
-            <input
-              id="confirmPassword"
-              type="password"
-              //   value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-              minLength={8}
-              autoComplete="new-password"
-              placeholder="আবার লিখুন"
-              className="w-full rounded-lg border border-[#dfe8df] bg-transparent px-3 py-2.5 text-sm outline-none transition focus:border-green-700 focus:ring-1 focus:ring-green-700"
-            />
-          </div>
-
           <button
             type="submit"
             className="w-full rounded-lg bg-[#07883e] px-4 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#067333] disabled:cursor-not-allowed disabled:opacity-60"
-          >Create Account</button>
+          >
+            Create Account
+          </button>
         </form>
 
         <div className="my-5 flex items-center gap-3">
